@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/ProximaNova.woff);
+}
+*{
+  font-family: 'ProximaNova';
+  user-select: none;
+  margin: 0;
+  text-decoration: none;
+  color: black;
+}
+html{
+  display: grid;
+  grid-template: auto / 1fr minmax(auto, 850px) 1fr;
+  background: grey;
+}
+body{
+  display: grid;
+  grid-area: 1/2/2/3;
+  grid-template: auto auto / auto;
+  background: white;
+  padding: 15px 40px;
+}
+header{
+  display: grid;
+  grid-area: 1/1/2/2;
+  grid-gap: 20px;
+  grid-template: auto/ 1fr 200px;
+  align-items: center;
+}
+h1{
+  display: none;
+}
+.name{
+  grid-area: 1/1/2/2;
+  font-size: 45px;
+  font-weight: bold;
+  border-top: 7px solid black;
+  border-bottom: 7px solid black;
+  text-align: left;
+  margin-top: 20px;
+  padding: 20px;
+}
+.email{
+  font-size: 18px;
+  font-weight: normal;
+}
+.photo{
+  grid-area: 1/2/2/3;
+  width: 100%;
+  border-radius: 50%;
+  display: grid;
+}
+main{
+  display: grid;
+  grid-area: 2/1/3/2;
+  grid-gap: 20px;
+  grid-template: repeat(7, auto) / auto;
+}
+.contacts, .objective, .summary, .skills, .experience, .education, .information{
+  display: grid;
+  grid-template: auto auto / 250px auto auto;
+  border-bottom: 2px solid black;
+  padding: 20px;
+  line-height: 1.5;
+}
+.contacts{
+  padding: 10px 20px 50px;
+  grid-template: auto / 140px auto;
+  text-align: center;
+  border-bottom: none;
+}
+.experience{
+  grid-template: auto / 250px auto;
+}
+h2, ul{
+  text-align: left;
+  padding-left: 20px;
+}
+.links{
+  grid-area: 1/2/2/3;
+  line-height: 2;
+}
+.links p{
+  padding-bottom: 10px;
+}
+.education h2{
+  grid-area: 1/1/5/2;
+}
+.education{
+  grid-gap: 10px 0;
+}
+.date{
+  text-align: right;
+}
+h3{
+  grid-column: 2/3;
+}
+.information, .contact_me{
+  border-bottom: 7px solid black;
+}
+.contact_me{
+  padding: 20px;
+  text-align: center;
+}
+.contact_me a{
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+}
+footer{
+  display: grid;
+  grid-area: 3/1/4/2;
+  font-size: 12px;
+  text-align: right;
+}
+.footer{
+  font-size: 14px;
+  line-height: 2;
+}
