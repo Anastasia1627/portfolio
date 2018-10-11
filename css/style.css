@@ -3,7 +3,7 @@
   src: url(../fonts/ProximaNova.woff);
 }
 *{
-  font-family: 'ProximaNova';
+  font-family: 'ProximaNova', 'Arial', sans-serif;
   user-select: none;
   margin: 0;
   text-decoration: none;
@@ -41,9 +41,8 @@ h1{
   margin-top: 20px;
   padding: 20px;
 }
-.email{
-  font-size: 18px;
-  font-weight: normal;
+.name, .contacts p{
+  user-select: text;
 }
 .photo{
   grid-area: 1/2/2/3;
