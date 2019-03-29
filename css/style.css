@@ -1,119 +1,138 @@
 @font-face {
-  font-family: 'ProximaNova';
-  src: url(../fonts/ProximaNova.woff);
+    font-family: 'ProximaNova';
+    src: url(../fonts/ProximaNova.woff);
 }
 *{
-  font-family: 'ProximaNova', 'Arial', sans-serif;
-  user-select: none;
-  margin: 0;
-  text-decoration: none;
-  color: black;
+    font-family: 'ProximaNova', 'Arial', sans-serif;
+    user-select: none;
+    margin: 0;
+    text-decoration: none;
+    color: black;
 }
 html{
-  display: grid;
-  grid-template: auto / 1fr minmax(auto, 850px) 1fr;
-  background: grey;
+    display: grid;
+    grid-template: auto / 1fr minmax(auto, 850px) 1fr;
+    background: grey;
 }
 body{
-  display: grid;
-  grid-area: 1/2/2/3;
-  grid-template: auto auto / auto;
-  background: white;
-  padding: 15px 40px;
+    display: grid;
+    grid-area: 1/2/2/3;
+    grid-template: auto auto / auto;
+    background: white;
+    padding: 15px 40px;
 }
 header{
-  display: grid;
-  grid-area: 1/1/2/2;
-  grid-gap: 20px;
-  grid-template: auto/ 1fr 200px;
-  align-items: center;
+    display: grid;
+    grid-area: 1/1/2/2;
+    grid-gap: 20px;
+    grid-template: auto/ 1fr 200px;
+    align-items: center;
 }
 h1{
-  display: none;
+    display: none;
 }
 .name{
-  grid-area: 1/1/2/2;
-  font-size: 45px;
-  font-weight: bold;
-  border-top: 7px solid black;
-  border-bottom: 7px solid black;
-  text-align: left;
-  margin-top: 20px;
-  padding: 20px;
-}
-.name, .contacts p{
-  user-select: text;
+    grid-area: 1/1/2/2;
+    font-size: calc(1.2em + 2vw);
+    font-weight: bold;
+    border-top: 7px solid black;
+    border-bottom: 7px solid black;
+    text-align: left;
+    padding: 20px;
 }
 .photo{
-  grid-area: 1/2/2/3;
-  width: 100%;
-  border-radius: 50%;
-  display: grid;
+    grid-area: 1/2/2/3;
+    width: calc(8em + 2vw);
+    border-radius: 50%;
+    display: grid;
+    justify-self: center;
 }
 main{
-  display: grid;
-  grid-area: 2/1/3/2;
-  grid-gap: 20px;
-  grid-template: repeat(7, auto) / auto;
+    display: grid;
+    grid-area: 2/1/3/2;
+    grid-gap: 20px;
+    grid-template: repeat(7, auto) / auto;
 }
-.contacts, .objective, .summary, .skills, .experience, .education, .information{
-  display: grid;
-  grid-template: auto auto / 250px auto auto;
-  border-bottom: 2px solid black;
-  padding: 20px;
-  line-height: 1.5;
+.contacts, .objective, .summary, .skills, .experience, .education, .information, .portfolio{
+    display: grid;
+    grid-template: auto auto / 150px auto auto;
+    border-bottom: 2px solid black;
+    padding: 20px;
+    line-height: 1.5;
+    text-align: right;
 }
 .contacts{
-  padding: 10px 20px 50px;
-  grid-template: auto / 140px auto;
-  text-align: center;
-  border-bottom: none;
-}
-.experience{
-  grid-template: auto / 250px auto;
+    grid-template: auto / auto;
+    border-bottom: none;
 }
 h2, ul{
-  text-align: left;
-  padding-left: 20px;
+    text-align: left;
+    padding-left: 20px;
 }
 .links{
-  grid-area: 1/2/2/3;
-  line-height: 2;
+    grid-area: 1/2/2/3;
+    line-height: 2;
+    text-align: left;
 }
 .links p{
-  padding-bottom: 10px;
+    padding-bottom: 10px;
 }
 .education h2{
-  grid-area: 1/1/5/2;
+    grid-area: 1/1/5/2;
 }
 .education{
-  grid-gap: 10px 0;
+    grid-gap: 10px 0;
+    text-align: left;
 }
 .date{
-  text-align: right;
+    text-align: right;
+    font-size: calc(0.8em + 0.2vw);
 }
 h3{
-  grid-column: 2/3;
+    grid-column: 2/3;
 }
 .information, .contact_me{
-  border-bottom: 7px solid black;
+    border-bottom: 7px solid black;
+    justify-content: space-between;
+}
+.portfolio{
+    grid-template: auto auto / auto;
+}
+.portfolio_field{
+    display: grid;
+    grid-area: 2/1/3/3;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-auto-flow: row;
+    grid-gap: 10px;
+}
+.portfolio_field img{
+    border: 2px solid gray;
+    width: 100%;
 }
 .contact_me{
-  padding: 20px;
-  text-align: center;
+    padding: 20px;
+    text-align: center;
+    line-height: 1.5;
 }
 .contact_me a{
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 2;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 2;
+    background: black;
+    color: white;
+    padding: 5px;
+}
+.contact_me p{
+    margin-bottom: 10px;
 }
 footer{
-  display: grid;
-  grid-area: 3/1/4/2;
-  font-size: 12px;
-  text-align: right;
+    display: grid;
+    grid-area: 3/1/4/2;
+    font-size: 12px;
+    text-align: right;
 }
 .footer{
-  font-size: 14px;
-  line-height: 2;
+    font-size: 14px;
+    line-height: 2;
 }
